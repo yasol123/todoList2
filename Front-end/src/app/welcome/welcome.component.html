@@ -1,0 +1,15 @@
+<div class = "container">
+<p>Welcome Aboard! Mr. {{name}}. <br> Welcome to Yasol's Todo List Application</p>
+    You can manage your todos <a routerLink = "/todos">here</a>
+    You can go to mxGraph <a routerLink = "/mxgraph">here</a>
+</div>
+
+<div class = "container">
+    <h2>Click here to get a customized welcome message</h2>
+    <button (click)="getWelcomeMessageWithParameter()" class = "btn btn-success">Get Welcome Message</button>
+</div>
+
+<div class = "container" *ngIf = "welcomeMessageFromService">
+    <h2>Your Customized Welcome Message, Bro</h2>
+    {{welcomeMessageFromService}}
+</div>

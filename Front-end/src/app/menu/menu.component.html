@@ -1,0 +1,15 @@
+<header>
+<nav class = "navbar navbar-expand-md navbar-dark bg-dark">
+    <div>
+        <a routerLink = "https://yasol123.github.io" class="navbar-brand">Yasol</a></div>
+        <ul class="navbar-nav">
+            <li *ngIf = "hardAuth.isUserLoggedIn()"><a routerLink= "/welcome/yasol123" class="nav-link">Home</a></li>
+            <li *ngIf = "hardAuth.isUserLoggedIn()"><a routerLink= "/todos" class="nav-link">Todo</a></li>
+        </ul>
+        <ul class="navbar-nav navbar-collapse justify-content-end">
+            <li *ngIf = "!hardAuth.isUserLoggedIn()"><a routerLink="/login" class = "nav-link">Login</a></li>
+            <li *ngIf = "hardAuth.isUserLoggedIn()"><a routerLink="/logout" class = "nav-link">Logout</a></li>
+        </ul>
+</nav>
+<h1> Yasol's Todo List Application Desu!!!</h1><br><br>
+</header>
